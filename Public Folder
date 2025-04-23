@@ -1,0 +1,21 @@
+abdooldata-app/
+│
+├── public/                    # Public files (HTML, CSS, JS)
+│   ├── index.html             # Main HTML file
+│   ├── style.css              # Styles for frontend
+│   └── app.js                 # Frontend JS (if needed)
+│
+├── private/                   # Backend and configuration files
+│   ├── server.js              # Node.js server (Express)
+│   ├── .env                   # Environment variables for Twilio, Paystack, etc.
+│   ├── package.json           # Dependencies
+│   ├── controllers/           # Logic for handling API requests
+│   │   ├── verification.js    # Logic for Twilio SMS verification
+│   │   └── payment.js         # Logic for handling Paystack payment
+│   └── services/              # External services (Twilio, Paystack)
+│       ├── twilioService.js    # Twilio API integration
+│       └── paystackService.js  # Paystack API integration
+│
+├── README.md                  # Documentation
+├── .gitignore                 # Git ignore file
+└── LICENSE                    # Application license (MIT or other)
