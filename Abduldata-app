@@ -1,0 +1,21 @@
+Abduldata-app/
+│
+├── public/
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+│
+├── private/
+│   ├── server.js
+│   ├── .env
+│   ├── package.json
+│   ├── controllers/
+│   │   ├── verification.js
+│   │   └── payment.js
+│   └── services/
+│       ├── twilioService.js
+│       └── paystackService.js
+│
+├── README.md
+├── .gitignore
+└── LICENSE
