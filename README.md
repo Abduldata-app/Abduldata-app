@@ -1,96 +1,96 @@
-# Abdool Data Application
+# Abduldata-app
 
-## Description
+**Abduldata-app** wata cikakkiyar web application ce da ke ba masu amfani damar:
+- Rijista da loda bayanai
+- Tabbatar da lambar wayarsu ta hanyar SMS (Twilio)
+- Biyan kudi ta amfani da Paystack
+- Siyan airtime, data, biyan lantarki, da sauransu
 
-Abdool Data Application is a comprehensive web application designed to handle multiple services such as SMS verification using Twilio and payment processing using Paystack. This application allows users to verify their phone numbers and make payments online securely.
+## Live Demo
+https://abdooldata.github.io/abdool-data-application/
 
-## Features
+---
 
-- **SMS Verification:** Uses Twilio to verify users' phone numbers via SMS.
-- **Payment Gateway:** Integrates Paystack for processing payments securely.
-- **User Authentication:** User registration and login for accessing services.
+## Technologies Used
 
-## Setup
+- **Frontend**: HTML, CSS (Tailwind), JavaScript  
+- **Backend**: Node.js, Express.js  
+- **Verification**: Twilio (SMS)  
+- **Payment**: Paystack
+
+---
+
+## How to Run the App
 
 ### 1. Clone the Repository
 
-To get started, first clone the repository to your local machine.
-
 ```bash
-git clone https://github.com/abdooldata-app/abdool-data-application.git
-cd abdool-data-application
+git clone https://github.com/Abduldata-app/Abduldata-app.git
+cd Abduldata-app
 
-2. Install Dependencies
+2. Install Backend Dependencies
 
-Ensure you have Node.js installed. Then, run the following command to install the required dependencies.
-
+cd private
 npm install
 
-3. Configure Environment Variables
+3. Add Environment Variables
 
-Create a .env file in the root directory and add the following credentials for Twilio and Paystack:
+Create a file named .env in the private/ folder and paste the following:
 
-TWILIO_ACCOUNT_SID=AC8a2ca4235af75173d6a804a33c4656df
-TWILIO_AUTH_TOKEN=33c0e1c16cacbbe4ea988068990b5992
-TWILIO_VERIFY_SID=VA33be0e09cf12d212245485efaf33395c
+TWILIO_ACCOUNT_SID=AC8a2ca4235af75173d6a804a33c4656df  
+TWILIO_AUTH_TOKEN=33c0e1c16cacbbe4ea988068990b5992  
+TWILIO_VERIFY_SID=VA33be0e09cf12d212245485efaf33395c  
 
-PAYSTACK_PUBLIC_KEY=pk_live_fefa4cab21e99bd551e0979a445038b389d9cfea
+PAYSTACK_PUBLIC_KEY=pk_live_fefa4cab21e99bd551e0979a445038b389d9cfea  
 PAYSTACK_SECRET_KEY=sk_live_d376cf9690cd746cd9ffd6ab6b38cd1a03ccd642
 
-4. Run the Application
+4. Start the Backend Server
 
-After setting up the .env file, start the application with the following command:
+node server.js
 
-npm start
+5. Open the Frontend
 
-The server will start running on http://localhost:3000.
+Open public/index.html directly in your browser or host it using a service like GitHub Pages.
 
-Usage
 
-1. Send SMS Verification
+---
 
-To send an SMS verification code, make a POST request to /send-verification with the user's phone number.
+Folder Structure
 
-Endpoint:
+Abduldata-app/
+│
+├── public/
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+│
+├── private/
+│   ├── server.js
+│   ├── .env
+│   ├── package.json
+│   ├── controllers/
+│   │   ├── verification.js
+│   │   └── payment.js
+│   └── services/
+│       ├── twilioService.js
+│       └── paystackService.js
+│
+├── README.md
+├── .gitignore
+└── LICENSE
 
-POST /send-verification
 
-Body:
+---
 
-{
-  "phoneNumber": "+234xxxxxxxxxx"
-}
+Contact
 
-2. Verify Code
+Don taimako ko tambaya, tuntube ni ta:
+Email: auh439@gmail.com
+Phone: 07065631640
 
-To verify the code entered by the user, make a POST request to /verify-code with the phone number and the verification code.
 
-Endpoint:
-
-POST /verify-code
-
-Body:
-
-{
-  "phoneNumber": "+234xxxxxxxxxx",
-  "code": "123456"
-}
-
-3. Make a Payment
-
-To initiate a payment, make a POST request to /pay with the user's email and the payment amount.
-
-Endpoint:
-
-POST /pay
-
-Body:
-
-{
-  "email": "user@example.com",
-  "amount": 5000
-}
+---
 
 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License
