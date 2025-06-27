@@ -1,0 +1,26 @@
+import React from 'react';
+
+function Dashboard() {
+  const handleBuyAirtime = () => {
+    alert("Airtime purchase feature will be implemented here.");
+  };
+
+  const handleBuyData = () => {
+    alert("Data purchase feature will be implemented here.");
+  };
+
+  const handleReferral = () => {
+    alert("Referral feature will be implemented here.");
+  };
+
+  return (
+    <div>
+      <h1>Welcome to AbdulData Dashboard</h1>
+      <button onClick={handleBuyAirtime}>Buy Airtime</button>
+      <button onClick={handleBuyData}>Buy Data</button>
+      <button onClick={handleReferral}>Referral</button>
+    </div>
+  );
+}
+
+export default Dashboard;
